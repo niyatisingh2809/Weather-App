@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="weather-container">
+    <div class="location-time" id="locationTime">
+      <h2 id="locationName">India Weather Forecast</h2>
+      <div class="time-date">
+        <div id="currentDay">Day: Loading...</div>
+        <div id="currentDate">Date: Loading...</div>
+        <div id="currentTime">Time: Loading...</div>
+      </div>
+    </div>
+    
+    <input type="text" id="locationInput" placeholder="Enter city in India (e.g. Mumbai, Delhi)" />
+    <div class="tab-buttons">
+      <button onclick="getWeather('current')" class="active">Current Weather</button>
+      <button onclick="getWeather('hourly')">Hourly Forecast</button>
+      <button onclick="getWeather('forecast')">3-Day Forecast</button>
+    </div>
+    
+    <div class="result" id="weatherResult"></div>
+    
+    <div id="currentWeather" class="tab-content active"></div>
+    <div id="hourlyWeather" class="tab-content"></div>
+    <div id="forecastWeather" class="tab-content"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
